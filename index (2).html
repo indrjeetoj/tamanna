@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Golden Fork | Restaurant</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fffdf8;
+  color: #252a25;
+}
+
+nav {
+  background: #17251d;
+  color: white;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e4c58a;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 18px;
+}
+
+nav a:hover {
+  color: #e4c58a;
+}
+
+.hero {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  padding: 60px 8%;
+  color: white;
+  background:
+    linear-gradient(90deg, #101a14ed, #101a1460),
+    url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=85")
+    center/cover;
+}
+
+.hero-content {
+  max-width: 550px;
+}
+
+.hero small {
+  color: #e4c58a;
+  letter-spacing: 3px;
+}
+
+.hero h1 {
+  font-size: clamp(40px, 7vw, 65px);
+  margin: 18px 0;
+  line-height: 1.1;
+}
+
+.hero p {
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: inline-block;
+  background: #d6b576;
+  color: #17251d;
+  border: none;
+  border-radius: 5px;
+  padding: 13px 22px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #f1d9a5;
+}
+
+.menu {
+  padding: 70px 8%;
+  text-align: center;
+}
+
+.menu h2, .about h2, .contact h2 {
+  font-size: 35px;
+  margin: 12px 0 30px;
+}
+
+.subtitle {
+  color: #a47a3e;
+  letter-spacing: 3px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  text-align: left;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px #00000012;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 21px;
+}
+
+.card p {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  color: #9b7133;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.order {
+  background: #17251d;
+  color: white;
+  border: none;
+  padding: 10px 17px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.order:hover {
+  background: #34523f;
+}
+
+.about {
+  background: #f3eee3;
+  padding: 70px 10%;
+  text-align: center;
+}
+
+.about p:last-child {
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.9;
+  color: #666;
+}
+
+.contact {
+  padding: 65px 20px;
+  text-align: center;
+  line-height: 2.2;
+}
+
+.contact .btn {
+  margin-top: 15px;
+}
+
+footer {
+  background: #17251d;
+  color: white;
+  text-align: center;
+  padding: 22px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 0 7px;
+  }
+
+  .food-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 420px;
+  }
+
+  .menu h2, .about h2, .contact h2 {
+    font-size: 29px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">🍴 Golden Fork</div>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <small>FRESH • TASTY • DELICIOUS</small>
+    <h1>Good Food.<br>Great Moments.</h1>
+    <p>Discover delicious meals made with love,
+    fresh ingredients and unforgettable flavours.</p>
+    <a href="#menu" class="btn">Explore Our Menu</a>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="subtitle">OUR SPECIALITIES</div>
+  <h2>Popular Dishes</h2>
+
+  <div class="food-grid">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80" alt="Cheese Pizza">
+      <div class="card-content">
+        <h3>Cheese Pizza</h3>
+        <p>Crispy crust, melted cheese and delicious herbs.</p>
+        <div class="price-row">
+          <span class="price">₹249</span>
+          <button class="order" data-name="Cheese Pizza">Order Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" alt="Classic Burger">
+      <div class="card-content">
+        <h3>Classic Burger</h3>
+        <p>Juicy burger with fresh vegetables and sauces.</p>
+        <div class="price-row">
+          <span class="price">₹149</span>
+          <button class="order" data-name="Classic Burger">Order Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Chef Special">
+      <div class="card-content">
+        <h3>Chef's Special</h3>
+        <p>A tasty special made with our chef's favourite ingredients.</p>
+        <div class="price-row">
+          <span class="price">₹199</span>
+          <button class="order" data-name="Chef's Special">Order Now</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="subtitle">OUR STORY</div>
+  <h2>Made With Love</h2>
+  <p>At The Golden Fork, we believe every meal
+  should be a memorable experience. We combine
+  fresh ingredients, friendly service and delicious
+  flavours to make every visit special.</p>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Visit Us Today!</h2>
+  <p>📍 Main Market, New Delhi, India</p>
+  <p>📞 +91 98765 43210</p>
+  <p>🕒 Open Daily: 10 AM – 10 PM</p>
+  <a href="mailto:hello@example.com" class="btn">Contact Us</a>
+</section>
+
+<footer>
+  <p>© 2026 The Golden Fork | Restaurant Demo Website</p>
+</footer>
+
+<script>
+document.querySelectorAll(".order").forEach(function(button) {
+  button.addEventListener("click", function() {
+    const name = button.dataset.name;
+
+    alert(
+      "Welcome to The Golden Fork! 🍴\n\n" +
+      "Selected item: " + name +
+      "\n\nThis is a demo website. No real order was placed."
+    );
+  });
+});
+</script>
+
+</body>
+</html>
